@@ -9,8 +9,9 @@ install()
 
 	clean_old_install
 
-	mkdir -p "$PREFIX/include"
+	mkdir -p "$PREFIX/include/unsupported"
 	cp -r Eigen "$PREFIX/include"
+	cp -r unsupported/Eigen "$PREFIX/include/unsupported"
 	ln -fs "$PREFIX/include/Eigen/Core" "$PREFIX/include/Eigen/Core.h"
 
 	install_ups
