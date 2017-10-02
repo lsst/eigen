@@ -1,8 +1,13 @@
 # EupsPkg config file. Sourced by 'eupspkg'
 
+config()
+{
+    (rm -rf build && mkdir build && cd build && cmake -DCMAKE_INSTALL_PREFIX=$PREFIX ..)
+}
+
 build()
 {
-	(mkdir build && cd build && cmake -DCMAKE_INSTALL_PREFIX=$PREFIX .. && make)
+	(cd build && make)
 }
 
 install()
