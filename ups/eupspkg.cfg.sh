@@ -2,7 +2,7 @@
 
 config()
 {
-    (rm -rf build && mkdir build && cd build && cmake -DCMAKE_INSTALL_PREFIX=$PREFIX ..)
+    (rm -rf build && mkdir build && cd build && cmake -DCMAKE_INSTALL_PREFIX=$PREFIX -DBUILD_TESTING=OFF ..)
 }
 
 build()
